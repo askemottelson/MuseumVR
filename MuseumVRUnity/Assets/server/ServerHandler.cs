@@ -9,8 +9,14 @@ using UnityEngine.UI;
 public class ServerHandler : MonoBehaviour
 {
     public TextAsset jsonFile;
-    public Canvas canvas;
 
+    // references to UI
+    public GameObject title;
+    public GameObject button1;
+    public GameObject button2;
+    public GameObject button3;
+    public GameObject button4;
+    public GameObject button5;
 
     // make sure this one is false for deployment
     private bool TESTING = Application.isEditor;
@@ -18,15 +24,18 @@ public class ServerHandler : MonoBehaviour
     private Questionnaires qs;
     private string server = "https://museum-vr.ue.r.appspot.com/entry";
 
+    // stores data
     private Log log = new Log();
+
+    // internal counters
+    int current_questionnaire_count = 0;
+    int current_question_count = 0;
 
     void Start()
     {
         this.qs = JsonUtility.FromJson<Questionnaires>(jsonFile.text);
+        LogQuestions();
     }
-
-    int current_questionnaire_count = 0;
-    int current_question_count = 0;
 
     private Questionnaire GetCurrentQuestionnaire()
     {
@@ -57,26 +66,62 @@ public class ServerHandler : MonoBehaviour
         }
         
         SetTitle(question.question);
-        SetLabelLeft(question.low + " ...");
-        SetLabelRight("... " + question.high);
+        string[] button_titles =
+        {
+            question.b1, question.b2, question.b3, question.b4, question.b5
+        };
+        setButtonTitles(
+            button_titles
+        );
     }
 
-    public void SetLabelLeft(string label)
+    public void setButtonTitles(string[] values)
     {
-        Text label0 = canvas.transform.Find("Panel/LeftLabel").GetComponent<Text>();
-        label0.text = label;
+        // first make all invis
+        HideButtons();
+
+        GameObject[] buttons =
+        {
+            button1, button2, button3, button4, button5
+        };
+
+        for(var i = 0; i < values.Length; i++)
+        {
+            string val = values[i];
+            if (val == "")
+            {
+                // never mind this button
+                continue;
+            }
+
+            buttons[i].SetActive(true);
+
+            try
+            {
+                buttons[i].GetComponent<Text>().text = val;
+            }
+            catch (Exception e)
+            {
+                // if this errors, the text elem is probably on a child obj
+                foreach (Transform child in buttons[i].transform)
+                {
+                    Text c = child.GetComponent<Text>();
+                    if (c != null)
+                    {
+                        // found
+                        c.text = val;
+                        break;
+                    }
+                }
+            }
+        }
+
     }
 
-    public void SetLabelRight(string label)
+    public void SetTitle(string str_title)
     {
-        Text label1 = canvas.transform.Find("Panel/RightLabel").GetComponent<Text>();
-        label1.text = label;
-    }
-
-    public void SetTitle(string title)
-    {
-        Text title0 = canvas.transform.Find("Panel/Title").GetComponent<Text>();
-        title0.text = title;
+        Text title0 = title.GetComponent<Text>();
+        title0.text = str_title;
     }
 
     void LogQuestions()
@@ -85,7 +130,7 @@ public class ServerHandler : MonoBehaviour
         {
             foreach (Question question in q.questions)
             {
-                Debug.Log("Question: " + question.question + " " + question.buttons);
+                Debug.Log("Question: " + question.question);
             }
         }
     }
@@ -99,7 +144,7 @@ public class ServerHandler : MonoBehaviour
             current_questionnaire_count++;
             current_question_count = 0;
 
-            if (current_questionnaire_count == this.qs.questionnaires.Length -1)
+            if (current_questionnaire_count == this.qs.questionnaires.Length)
             {
                 current_questionnaire_count = 0;
                 return false;
@@ -115,17 +160,11 @@ public class ServerHandler : MonoBehaviour
 
     public void HideButtons()
     {
-        GameObject b1 = canvas.transform.Find("Panel/Button 1").gameObject;
-        GameObject b2 = canvas.transform.Find("Panel/Button 2").gameObject;
-        GameObject b3 = canvas.transform.Find("Panel/Button 3").gameObject;
-        GameObject b4 = canvas.transform.Find("Panel/Button 4").gameObject;
-        GameObject b5 = canvas.transform.Find("Panel/Button 5").gameObject;
-
-        b1.SetActive(false);
-        b2.SetActive(false);
-        b3.SetActive(false);
-        b4.SetActive(false);
-        b5.SetActive(false);
+        button1.SetActive(false);
+        button2.SetActive(false);
+        button3.SetActive(false);
+        button4.SetActive(false);
+        button5.SetActive(false);
     }
 
     public string toJSON()

@@ -28,13 +28,11 @@ public class ExperimentController : MonoBehaviour
             sh.UpdateCanvas();
 
             // simulate a little latency, so we can see what's happening
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
         }
 
         // now questionnaire is done, send to backend server
         sh.SetTitle("Done.");
-        sh.SetLabelLeft("");
-        sh.SetLabelRight("");
         sh.HideButtons();
 
         sh.sendToServer();

@@ -5,37 +5,47 @@
             "questions": [
                 {
                     "question": "I felt like I was in the presence of another person in the virtual environment",
-                    "low": "Completely disagree",
-                    "high": "Completely agree",
-                    "buttons": 5
+                    "b1": "Completely disagree",
+                    "b2": "Disagree",
+                    "b3": "Neither disagree nor agree",
+                    "b4": "Agree",
+                    "b5": "Completely agree"
                 },
 
                 {
                     "question": "I felt that the person in the virtual environment was aware of my presence",
-                    "low": "Completely disagree",
-                    "high": "Completely agree",
-                    "buttons": 5
+                    "b1": "Completely disagree",
+                    "b2": "Disagree",
+                    "b3": "Neither disagree nor agree",
+                    "b4": "Agree",
+                    "b5": "Completely agree"
                 },
 
                 {
                     "question": "The person in the virtual environment appeared to be sentient (conscious and alive) to me",
-                    "low": "Completely disagree",
-                    "high": "Completely agree",
-                    "buttons": 5
+                    "b1": "Completely disagree",
+                    "b2": "Disagree",
+                    "b3": "Neither disagree nor agree",
+                    "b4": "Agree",
+                    "b5": "Completely agree"
                 },
 
                 {
                     "question": "During the simulation, there were times where the computer interface seemed to disappear, and I felt like I was working directly with another person",
-                    "low": "Completely disagree",
-                    "high": "Completely agree",
-                    "buttons": 5
+                    "b1": "Completely disagree",
+                    "b2": "Disagree",
+                    "b3": "Neither disagree nor agree",
+                    "b4": "Agree",
+                    "b5": "Completely agree"
                 },
 
                 {
                     "question": "I had a sense that I was interacting with another person in the virtual environment, rather than a computer simulation",
-                    "low": "Completely disagree",
-                    "high": "Completely agree",
-                    "buttons": 5
+                    "b1": "Completely disagree",
+                    "b2": "Disagree",
+                    "b3": "Neither disagree nor agree",
+                    "b4": "Agree",
+                    "b5": "Completely agree"
                 }
             ]
         },
@@ -44,37 +54,89 @@
             "questions": [
                 {
                     "question": "I experienced the tour guide ...",
-                    "low": "Inanimate",
-                    "high": "Living",
-                    "buttons": 5
+                    "b1": "Inanimate",
+                    "b2": " ",
+                    "b3": " ",
+                    "b4": " ",
+                    "b5": "Living"
                 },
 
                 {
                     "question": "I experienced the tour guide ...",
-                    "low": "Synthetic",
-                    "high": "Real",
-                    "buttons": 5
+                    "b1": "Synthetic",
+                    "b2": " ",
+                    "b3": " ",
+                    "b4": " ",
+                    "b5": "Real"
                 },
 
                 {
                     "question": "I experienced the tour guide ...",
-                    "low": "Mechanical movement",
-                    "high": "Biological movement",
-                    "buttons": 5
+                    "b1": "Mechanical movement",
+                    "b2": " ",
+                    "b3": " ",
+                    "b4": " ",
+                    "b5": "Biological movement"
                 },
 
                 {
                     "question": "I experienced the tour guide ...",
-                    "low": "Human-made",
-                    "high": "Human-like",
-                    "buttons": 5
+                    "b1": "Human-made",
+                    "b2": " ",
+                    "b3": " ",
+                    "b4": " ",
+                    "b5": "Human-like"
                 },
 
                 {
                     "question": "I experienced the tour guide ...",
-                    "low": "Without definite lifespan",
-                    "high": "Mortal",
-                    "buttons": 5
+                    "b1": "Without definite lifespan",
+                    "b2": " ",
+                    "b3": " ",
+                    "b4": " ",
+                    "b5": "Mortal"
+                }
+            ]
+        },
+        {
+            "name": "Retention",
+            "questions": [
+                {
+                    "question": "Factual question 1 ...",
+                    "b1": "A1",
+                    "b2": "A2",
+                    "b3": "A3",
+                    "b4": "A4",
+                    "b5": ""
+                },
+                {
+                    "question": "Factual question 2 ...",
+                    "b1": "A1",
+                    "b2": "A2",
+                    "b3": "A3",
+                    "b4": "",
+                    "b5": ""
+                }
+            ]
+        },
+        {
+            "name": "Transfer",
+            "questions": [
+                {
+                    "question": "Tactual question 1 ...",
+                    "b1": "A1",
+                    "b2": "A2",
+                    "b3": "A3",
+                    "b4": "A4",
+                    "b5": ""
+                },
+                {
+                    "question": "Tactual question 2 ...",
+                    "b1": "A1",
+                    "b2": "A2",
+                    "b3": "A3",
+                    "b4": "",
+                    "b5": ""
                 }
             ]
         }

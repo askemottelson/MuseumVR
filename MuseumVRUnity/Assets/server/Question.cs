@@ -2,7 +2,9 @@
 public class Question
 {
     public string question;
-    public string low;
-    public string high;
-    public int buttons;
+    public string b1;
+    public string b2;
+    public string b3;
+    public string b4;
+    public string b5;
 }
