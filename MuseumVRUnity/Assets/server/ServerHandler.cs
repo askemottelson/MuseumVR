@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
+
 public class ServerHandler : MonoBehaviour
 {
     public TextAsset jsonFile;
@@ -98,14 +99,14 @@ public class ServerHandler : MonoBehaviour
 
             try
             {
-                buttons[i].GetComponent<Text>().text = val;
+                buttons[i].GetComponent<TMPro.TextMeshPro>().text = val;
             }
             catch (Exception e)
             {
                 // if this errors, the text elem is probably on a child obj
                 foreach (Transform child in buttons[i].transform)
                 {
-                    Text c = child.GetComponent<Text>();
+                    TMPro.TextMeshPro c = child.GetComponent<TMPro.TextMeshPro>();
                     if (c != null)
                     {
                         // found
@@ -120,7 +121,7 @@ public class ServerHandler : MonoBehaviour
 
     public void SetTitle(string str_title)
     {
-        Text title0 = title.GetComponent<Text>();
+        TMPro.TextMeshPro title0 = title.GetComponent<TMPro.TextMeshPro>();
         title0.text = str_title;
     }
 
