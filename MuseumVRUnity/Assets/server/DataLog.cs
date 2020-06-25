@@ -19,5 +19,7 @@ public class DataLog
         this.test = isTest;
         this.timestamp = new System.DateTimeOffset(DateTime.Now).ToUnixTimeSeconds();
         this.IP = new WebClient().DownloadString("http://icanhazip.com");
+
+        Debug.Log(this);
     }
 }
