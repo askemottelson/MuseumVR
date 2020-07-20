@@ -6,6 +6,10 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
+public class NoMoreQuestions : Exception
+{
+    //
+}
 
 public class ServerHandler : MonoBehaviour
 {
@@ -18,6 +22,7 @@ public class ServerHandler : MonoBehaviour
     public GameObject button3;
     public GameObject button4;
     public GameObject button5;
+    
 
     // make sure this one is false for deployment
     private bool TESTING = Application.isEditor;
@@ -31,6 +36,11 @@ public class ServerHandler : MonoBehaviour
     // internal counters
     int current_questionnaire_count = 0;
     int current_question_count = 0;
+
+    public int GetCondition()
+    {
+        return this.log.condition;
+    } 
 
     void Start()
     {
@@ -131,9 +141,11 @@ public class ServerHandler : MonoBehaviour
         {
             foreach (Question question in q.questions)
             {
-                Debug.Log("Question: " + question.question);
+                //Debug.Log("Question: " + question.question);
             }
         }
+        
+        UpdateCanvas();
     }
 
     public bool AnswerQuestion(int button_id)
@@ -147,7 +159,7 @@ public class ServerHandler : MonoBehaviour
 
             if (current_questionnaire_count == this.qs.questionnaires.Length)
             {
-                current_questionnaire_count = 0;
+                current_questionnaire_count = -1;
                 return false;
             }
         }

@@ -1,6 +1,19 @@
 {
     "questionnaires": [
         {
+            "name": "Begin survey",
+            "questions": [
+                {
+                    "question": "Ready?",
+                    "b1": "",
+                    "b2": "",
+                    "b3": "Begin survey",
+                    "b4": "",
+                    "b5": ""
+                }
+            ]
+        },
+        {
             "name": "Social presence",
             "questions": [
                 {
