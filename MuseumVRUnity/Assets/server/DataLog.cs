@@ -8,7 +8,7 @@ public class DataLog
 {
     public Answer[] answers;
     public bool test;
-    public long timestamp;
+    public long end;
     public string device;
     public string IP;
     public int condition;
@@ -19,7 +19,7 @@ public class DataLog
         this.device = SystemInfo.deviceModel;
         this.answers = answers.ToArray();
         this.test = isTest;
-        this.timestamp = new System.DateTimeOffset(DateTime.Now).ToUnixTimeSeconds();
+        this.end = new System.DateTimeOffset(DateTime.Now).ToUnixTimeSeconds();
         this.IP = new WebClient().DownloadString("http://icanhazip.com").Trim();
         this.start = start;
         this.condition = condition;
