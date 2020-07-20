@@ -1,160 +1,295 @@
 {
-    "questionnaires": [
+  "questionnaires": [
+    {
+      "name": "Begin survey",
+      "questions": [
         {
-            "name": "Begin survey",
-            "questions": [
-                {
-                    "question": "Ready?",
-                    "b1": "",
-                    "b2": "",
-                    "b3": "Begin survey",
-                    "b4": "",
-                    "b5": ""
-                }
-            ]
-        },
-        {
-            "name": "Social presence",
-            "questions": [
-                {
-                    "question": "I felt like I was in the presence of another person in the virtual environment",
-                    "b1": "Completely disagree",
-                    "b2": "Disagree",
-                    "b3": "Neither disagree nor agree",
-                    "b4": "Agree",
-                    "b5": "Completely agree"
-                },
-
-                {
-                    "question": "I felt that the person in the virtual environment was aware of my presence",
-                    "b1": "Completely disagree",
-                    "b2": "Disagree",
-                    "b3": "Neither disagree nor agree",
-                    "b4": "Agree",
-                    "b5": "Completely agree"
-                },
-
-                {
-                    "question": "The person in the virtual environment appeared to be sentient (conscious and alive) to me",
-                    "b1": "Completely disagree",
-                    "b2": "Disagree",
-                    "b3": "Neither disagree nor agree",
-                    "b4": "Agree",
-                    "b5": "Completely agree"
-                },
-
-                {
-                    "question": "During the simulation, there were times where the computer interface seemed to disappear, and I felt like I was working directly with another person",
-                    "b1": "Completely disagree",
-                    "b2": "Disagree",
-                    "b3": "Neither disagree nor agree",
-                    "b4": "Agree",
-                    "b5": "Completely agree"
-                },
-
-                {
-                    "question": "I had a sense that I was interacting with another person in the virtual environment, rather than a computer simulation",
-                    "b1": "Completely disagree",
-                    "b2": "Disagree",
-                    "b3": "Neither disagree nor agree",
-                    "b4": "Agree",
-                    "b5": "Completely agree"
-                }
-            ]
-        },
-        {
-            "name": "Perceived humanness",
-            "questions": [
-                {
-                    "question": "I experienced the tour guide ...",
-                    "b1": "Inanimate",
-                    "b2": " ",
-                    "b3": " ",
-                    "b4": " ",
-                    "b5": "Living"
-                },
-
-                {
-                    "question": "I experienced the tour guide ...",
-                    "b1": "Synthetic",
-                    "b2": " ",
-                    "b3": " ",
-                    "b4": " ",
-                    "b5": "Real"
-                },
-
-                {
-                    "question": "I experienced the tour guide ...",
-                    "b1": "Mechanical movement",
-                    "b2": " ",
-                    "b3": " ",
-                    "b4": " ",
-                    "b5": "Biological movement"
-                },
-
-                {
-                    "question": "I experienced the tour guide ...",
-                    "b1": "Human-made",
-                    "b2": " ",
-                    "b3": " ",
-                    "b4": " ",
-                    "b5": "Human-like"
-                },
-
-                {
-                    "question": "I experienced the tour guide ...",
-                    "b1": "Without definite lifespan",
-                    "b2": " ",
-                    "b3": " ",
-                    "b4": " ",
-                    "b5": "Mortal"
-                }
-            ]
-        },
-        {
-            "name": "Retention",
-            "questions": [
-                {
-                    "question": "Factual question 1 ...",
-                    "b1": "A1",
-                    "b2": "A2",
-                    "b3": "A3",
-                    "b4": "A4",
-                    "b5": ""
-                },
-                {
-                    "question": "Factual question 2 ...",
-                    "b1": "A1",
-                    "b2": "A2",
-                    "b3": "A3",
-                    "b4": "",
-                    "b5": ""
-                }
-            ]
-        },
-        {
-            "name": "Transfer",
-            "questions": [
-                {
-                    "question": "Tactual question 1 ...",
-                    "b1": "A1",
-                    "b2": "A2",
-                    "b3": "A3",
-                    "b4": "A4",
-                    "b5": ""
-                },
-                {
-                    "question": "Tactual question 2 ...",
-                    "b1": "A1",
-                    "b2": "A2",
-                    "b3": "A3",
-                    "b4": "",
-                    "b5": ""
-                }
-            ]
+          "question": "Ready?",
+          "b1": "",
+          "b2": "",
+          "b3": "Begin survey",
+          "b4": "",
+          "b5": ""
         }
-
-        
-
-    ]
+      ]
+    },
+    {
+      "name": "Perceived enjoyment",
+      "questions": [
+        {
+          "question": "Learning from the virtual instructor in the VR simulation was enjoyable",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        },
+        {
+          "question": "Learning from the virtual instructor in the VR simulation was pleasant",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        },
+        {
+          "question": "It was fun to learn from the virtual instructor in the VR simulation",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        }
+      ]
+    },
+    {
+      "name": "Perceived humanness",
+      "questions": [
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Inanimate",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Living"
+        },
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Synthetic",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Real"
+        },
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Mechanical movement",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Biological movement"
+        },
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Human-made",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Human-like"
+        },
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Without definite lifespan",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Mortal"
+        }
+      ]
+    },
+    {
+      "name": "Social presence",
+      "questions": [
+        {
+          "question": "I felt like I was in the presence of another person in the virtual environment",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        },
+        {
+          "question": "I felt that the person in the virtual environment was aware of my presence",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        },
+        {
+          "question": "The person in the virtual environment appeared to be sentient (conscious and alive) to me",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        },
+        {
+          "question": "During the simulation, there were times where the computer interface seemed to disappear, and I felt like I was working directly with another person",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        },
+        {
+          "question": "I had a sense that I was interacting with another person in the virtual environment, rather than a computer simulation",
+          "b1": "Completely disagree",
+          "b2": "Disagree",
+          "b3": "Neither disagree nor agree",
+          "b4": "Agree",
+          "b5": "Completely agree"
+        }
+      ]
+    },
+    {
+      "name": "Attractiveness",
+      "questions": [
+        {
+          "question": "I found the attractiveness of the guide to be",
+          "b1": "Extremely attractive",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Extremely unattractive"
+        }
+      ]
+    },
+    {
+      "name": "MCQ",
+      "questions": [
+        {
+          "question": "A situation where a contagious disease spreads rapidly among people in a particular area is called:",
+          "b1": "An epidemic",
+          "b2": "A pandemic",
+          "b3": "An outbreak",
+          "b4": "A quarantine",
+          "b5": ""
+        },
+        {
+          "question": "What term is used to describe microorganisms that can make us sick?",
+          "b1": "Organic",
+          "b2": "Pathogenic",
+          "b3": "Parasitic",
+          "b4": "Toxic",
+          "b5": ""
+        },
+        {
+          "question": "When people who are not immune to a disease are given indirect protection through the majority who are immune to the disease, it is called:",
+          "b1": "Herd immunity",
+          "b2": "Antimicrobial resistance",
+          "b3": "Majority protection",
+          "b4": "Vaccine",
+          "b5": ""
+        },
+        {
+          "question": "Which genus is the virus that causes measles a member of?",
+          "b1": "Mamastrovirus",
+          "b2": "Machlomovirus",
+          "b3": "Morbillivirus",
+          "b4": "Maculavirus",
+          "b5": ""
+        },
+        {
+          "question": "What characteristic symptom is measles usually associated with?",
+          "b1": "Shortness of breath",
+          "b2": "Rash of red spots",
+          "b3": "Hair loss",
+          "b4": "Kidney failure",
+          "b5": ""
+        },
+        {
+          "question": "What animal is considered to be the primary source of transmission of zika virus to humans through its bite?",
+          "b1": "Dog",
+          "b2": "Monkey",
+          "b3": "Bat",
+          "b4": "Mosquito",
+          "b5": ""
+        },
+        {
+          "question": "What term is used to describe the birth defect caused by zika virus where a baby's head is smaller than expected?",
+          "b1": "Microcephaly",
+          "b2": "Anotia",
+          "b3": "Microtia",
+          "b4": "Omphalocele",
+          "b5": ""
+        },
+        {
+          "question": "What term can be used to classify an infectious disease caused by a virus that has jumped from an animal to a human?",
+          "b1": "Oncogenic",
+          "b2": "Cytopathic",
+          "b3": "Veterinary",
+          "b4": "Zoonotic",
+          "b5": ""
+        },
+        {
+          "question": "The COVID-19 was on Jan 30th declared by the World Health Organization to be a(n):",
+          "b1": "Wave",
+          "b2": "Outbreak",
+          "b3": "Pandemic",
+          "b4": "Epidemic",
+          "b5": ""
+        },
+        {
+          "question": "What does it mean when a disease is said to spread through droplets?",
+          "b1": "It is spread through drinking water",
+          "b2": "It is spread through coughing or sneezing",
+          "b3": "It is spread through atmospheric humidity",
+          "b4": "It is spread through airborne dust particles",
+          "b5": ""
+        },
+        {
+          "question": "What virus family is zika virus a member of?",
+          "b1": "Fuselloviridae",
+          "b2": "Guttaviridae",
+          "b3": "Flaviviridae",
+          "b4": "Genomoviridae",
+          "b5": ""
+        },
+        {
+          "question": "How many percent develop mild symptoms after contracting COVID-19?",
+          "b1": "50",
+          "b2": "60",
+          "b3": "70",
+          "b4": "80",
+          "b5": ""
+        }
+      ]
+    },
+    {
+      "name": "Demographics",
+      "questions": [
+        {
+          "question": "What is your age?",
+          "b1": "18-29",
+          "b2": "30-39",
+          "b3": "40-49",
+          "b4": "50-59",
+          "b5": "60+"
+        },
+        {
+          "question": "What is your gender?",
+          "b1": "Female",
+          "b2": "Male",
+          "b3": "Non-binary",
+          "b4": "",
+          "b5": ""
+        },
+        {
+          "question": "How many times have you used Virtual Reality (VR) before?",
+          "b1": "0",
+          "b2": "1",
+          "b3": "2-10",
+          "b4": "11-50",
+          "b5": "50+"
+        },
+        {
+          "question": "What is your highest completed education?",
+          "b1": "9th grade",
+          "b2": "High school",
+          "b3": "Bachelor's degree",
+          "b4": "Master's Degree",
+          "b5": "PhD or higher"
+        },
+        {
+          "question": "How well can you speak English?",
+          "b1": "Not at all",
+          "b2": "Not well",
+          "b3": "Well",
+          "b4": "Very well",
+          "b5": "Native speaker"
+        }
+      ]
+    }
+  ]
 }

@@ -20,7 +20,7 @@ public class DataLog
         this.answers = answers.ToArray();
         this.test = isTest;
         this.timestamp = new System.DateTimeOffset(DateTime.Now).ToUnixTimeSeconds();
-        this.IP = new WebClient().DownloadString("http://icanhazip.com");
+        this.IP = new WebClient().DownloadString("http://icanhazip.com").Trim();
         this.start = start;
         this.condition = condition;
 
