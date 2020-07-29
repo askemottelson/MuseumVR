@@ -24,6 +24,8 @@ public class ServerHandler : MonoBehaviour
     public GameObject button5;
 
     public ServerResponse sr;
+
+    public bool finishedQuestionnaireAlready = false;
     
 
     // make sure this one is false for deployment
@@ -58,6 +60,12 @@ public class ServerHandler : MonoBehaviour
 
     private Questionnaire GetCurrentQuestionnaire()
     {
+        Questionnaire q = this.qs.questionnaires[current_questionnaire_count];
+        
+        while(q.secondonly && !finishedQuestionnaireAlready) {
+            this.current_questionnaire_count++;
+            q = this.qs.questionnaires[current_questionnaire_count];
+        }
         return this.qs.questionnaires[current_questionnaire_count];
     }
 
@@ -80,9 +88,10 @@ public class ServerHandler : MonoBehaviour
         catch (Exception e) {
             // no more questions
             Debug.Log("No more questions");
-            Debug.Log(e.Message);
             return;
         }
+
+        Debug.Log("Questionnaire: '" + questionnaire.name + "', Q" + this.current_question_count);
         
         SetTitle(question.question);
         string[] button_titles =

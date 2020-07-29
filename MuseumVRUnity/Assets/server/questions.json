@@ -1,6 +1,7 @@
 {
   "questionnaires": [
     {
+      "secondonly": false,
       "name": "Begin survey",
       "questions": [
         {
@@ -15,6 +16,7 @@
     },
     {
       "name": "Perceived enjoyment",
+      "secondonly": true,
       "questions": [
         {
           "question": "Learning from the virtual instructor in the VR simulation was enjoyable",
@@ -44,6 +46,7 @@
     },
     {
       "name": "Perceived humanness",
+      "secondonly": true,
       "questions": [
         {
           "question": "I experienced the tour guide ...",
@@ -89,6 +92,7 @@
     },
     {
       "name": "Social presence",
+      "secondonly": true,
       "questions": [
         {
           "question": "I felt like I was in the presence of another person in the virtual environment",
@@ -134,22 +138,48 @@
     },
     {
       "name": "Attractiveness",
+      "secondonly": true,
       "questions": [
         {
-          "question": "I found the attractiveness of the guide to be",
-          "b1": "Extremely attractive",
+          "question": "I experienced the tour guide ...",
+          "b1": "Ugly",
           "b2": " > ",
           "b3": " > ",
           "b4": " > ",
-          "b5": "Extremely unattractive"
+          "b5": "Beautiful"
+        },
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Repulsive",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Agreeable"
+        },
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Crude",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Stylish"
+        },
+        {
+          "question": "I experienced the tour guide ...",
+          "b1": "Messy",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Sleek"
         }
       ]
     },
     {
       "name": "MCQ",
+      "secondonly": false,
       "questions": [
         {
-          "question": "A situation where a contagious disease spreads rapidly among people in a particular area is called:",
+          "question": "A situation where a contagious disease spreads rapidly among people in a specific area is called:",
           "b1": "An epidemic",
           "b2": "A pandemic",
           "b3": "An outbreak",
@@ -189,7 +219,7 @@
           "b5": ""
         },
         {
-          "question": "What animal is considered to be the primary source of transmission of zika virus to humans through its bite?",
+          "question": "Which animal is considered to be the primary source of transmission of zika virus to humans through its bite?",
           "b1": "Dog",
           "b2": "Monkey",
           "b3": "Bat",
@@ -221,11 +251,11 @@
           "b5": ""
         },
         {
-          "question": "What does it mean when a disease is said to spread through droplets?",
-          "b1": "It is spread through drinking water",
-          "b2": "It is spread through coughing or sneezing",
-          "b3": "It is spread through atmospheric humidity",
-          "b4": "It is spread through airborne dust particles",
+          "question": "When a disease is said to spread through droplets, it means it is spread through ...",
+          "b1": "drinking water",
+          "b2": "coughing or sneezing",
+          "b3": "atmospheric humidity",
+          "b4": "airborne dust particles",
           "b5": ""
         },
         {
@@ -237,17 +267,82 @@
           "b5": ""
         },
         {
-          "question": "How many percent develop mild symptoms after contracting COVID-19?",
+          "question": "How many percent develop only mild or no symptoms after contracting COVID-19?",
           "b1": "50",
           "b2": "60",
           "b3": "70",
           "b4": "80",
+          "b5": ""
+        },
+        {
+          "question": "Which of the following does NOT reduce the spread of virus?",
+          "b1": "Antibiotics",
+          "b2": "Vaccination",
+          "b3": "Social distancing",
+          "b4": "Hand hygiene",
+          "b5": ""
+        },
+        {
+          "question": "The incubation period is the time between:",
+          "b1": "contracting a virus and the patient is no longer contagious",
+          "b2": "contracting a virus and symptoms start",
+          "b3": "symptoms start and the patient is healthy",
+          "b4": "a patient is actively contagious",
+          "b5": ""
+        },
+        {
+          "question": "How many days are measles patients contagious after rashes appear?",
+          "b1": "0",
+          "b2": "2",
+          "b3": "4",
+          "b4": "6",
+          "b5": ""
+        },
+        {
+          "question": "When was the measles vaccination introduced?",
+          "b1": "1933",
+          "b2": "1943",
+          "b3": "1953",
+          "b4": "1963",
+          "b5": ""
+        },
+        {
+          "question": "How do vaccines help the body develop immunity to diseases? They ...",
+          "b1": "imitate an infection that the body remembers how to fight",
+          "b2": "create a protective membrane around vital cells",
+          "b3": "contain microorganisms that combat virus",
+          "b4": "contain antibodies that eliminate virus",
+          "b5": ""
+        },
+        {
+          "question": "Which animals are considered natural hosts for COVID-19?",
+          "b1": "Mosquitoes",
+          "b2": "Bats",
+          "b3": "Rats",
+          "b4": "Apes",
+          "b5": ""
+        },
+        {
+          "question": "Where was the Zika virus first discovered?",
+          "b1": "50",
+          "b2": "60",
+          "b3": "70",
+          "b4": "80",
+          "b5": ""
+        },
+        {
+          "question": "Which of these areas reported the ealiest outbreak of Zika virus?",
+          "b1": "Florida, US",
+          "b2": "Texas, US",
+          "b3": "Brazil",
+          "b4": "Uganda",
           "b5": ""
         }
       ]
     },
     {
       "name": "Demographics",
+      "secondonly": true,
       "questions": [
         {
           "question": "What is your age?",
@@ -275,11 +370,11 @@
         },
         {
           "question": "What is your highest completed education?",
-          "b1": "9th grade",
-          "b2": "High school",
-          "b3": "Bachelor's degree",
-          "b4": "Master's Degree",
-          "b5": "PhD or higher"
+          "b1": "High school or less",
+          "b2": "Bachelor's degree",
+          "b3": "Master's Degree",
+          "b4": "PhD or higher",
+          "b5": ""
         },
         {
           "question": "How well can you speak English?",
