@@ -210,8 +210,16 @@ public class ServerHandler : MonoBehaviour
         }
         else
         {
-            // Print Body
-            Debug.Log(www.downloadHandler.text);
+            ServerResponse sr = JsonUtility.FromJson<ServerResponse>(www.downloadHandler.text);
+
+            string PID = sr.PID;
+            Debug.Log("Participant ID: " + PID); // show this in an interface after finishing tour
         }
     }
+}
+
+class ServerResponse
+{
+    public string PID;
+    public string status;
 }
