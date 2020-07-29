@@ -125,7 +125,6 @@ public class ExperimentController : MonoBehaviour
         
         if (!more)
         {
-
             if(finishedQuestionnaireAlready) { 
                 sh.SetTitle("Thank you for participating! You may now take off your headset.");
                 sh.HideButtons();
