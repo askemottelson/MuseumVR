@@ -93,14 +93,52 @@ public class ExperimentController : MonoBehaviour
         _buttonPress(5);
     }
 
+    IEnumerator CheckForServerResponse()
+    {
+        while (sh.sr == null)
+        {
+            // do nothing
+            yield return new WaitForSeconds(1);
+        }
+
+        // now we have a server response
+        Debug.Log("Participant ID: " + sh.sr.PID);
+
+        // MAKE POPUP HERE
+
+    }
+
+    bool finishedQuestionnaireAlready = false;
+
     private void _buttonPress(int button_id)
     {
-        bool more = sh.AnswerQuestion(button_id);
+        bool more = false;
+        try
+        {
+            more = sh.AnswerQuestion(button_id);
+        }
+        catch (Exception e)
+        {
+            // tried to answer question after all have been answered
+            more = false;
+        }
+        
         if (!more)
         {
-            sh.SetTitle("Done.");
-            sh.HideButtons();
-            sh.sendToServer();
+
+            if(finishedQuestionnaireAlready) { 
+                sh.SetTitle("Thank you for participating! You may now take off your headset.");
+                sh.HideButtons();
+                sh.sendToServer();
+                StartCoroutine(CheckForServerResponse());
+            }
+            else
+            {
+                // let's allow for a second fill out of questionnaire pre/post
+                finishedQuestionnaireAlready = true;
+                sh.Reset();
+                Debug.Log("Filled out pre survey, DONE");
+            }
         }
         else
         {
