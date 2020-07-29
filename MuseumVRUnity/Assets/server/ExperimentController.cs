@@ -13,8 +13,6 @@ public class ExperimentController : MonoBehaviour
         // get reference to serverhandler component
         this.sh = gameObject.GetComponent<ServerHandler>();
 
-        sh.sendToServer();
-
         //StartCoroutine(FillOut());
     }
 
