@@ -22,6 +22,8 @@ public class ServerHandler : MonoBehaviour
     public GameObject button3;
     public GameObject button4;
     public GameObject button5;
+
+    public ServerResponse sr;
     
 
     // make sure this one is false for deployment
@@ -41,6 +43,12 @@ public class ServerHandler : MonoBehaviour
     {
         return this.log.condition;
     } 
+
+    public void Reset()
+    {
+        this.current_questionnaire_count = 0;
+        this.current_question_count = 0;
+    }
 
     void Start()
     {
@@ -210,15 +218,12 @@ public class ServerHandler : MonoBehaviour
         }
         else
         {
-            ServerResponse sr = JsonUtility.FromJson<ServerResponse>(www.downloadHandler.text);
-
-            string PID = sr.PID;
-            Debug.Log("Participant ID: " + PID); // show this in an interface after finishing tour
+            this.sr = JsonUtility.FromJson<ServerResponse>(www.downloadHandler.text);            
         }
     }
 }
 
-class ServerResponse
+public class ServerResponse
 {
     public string PID;
     public string status;
