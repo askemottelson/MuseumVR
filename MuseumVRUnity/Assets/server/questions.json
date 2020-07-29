@@ -1,6 +1,7 @@
 {
   "questionnaires": [
     {
+      "secondonly": false,
       "name": "Begin survey",
       "questions": [
         {
@@ -15,6 +16,7 @@
     },
     {
       "name": "Perceived enjoyment",
+      "secondonly": true,
       "questions": [
         {
           "question": "Learning from the virtual instructor in the VR simulation was enjoyable",
@@ -44,6 +46,7 @@
     },
     {
       "name": "Perceived humanness",
+      "secondonly": true,
       "questions": [
         {
           "question": "I experienced the tour guide ...",
@@ -89,6 +92,7 @@
     },
     {
       "name": "Social presence",
+      "secondonly": true,
       "questions": [
         {
           "question": "I felt like I was in the presence of another person in the virtual environment",
@@ -134,6 +138,7 @@
     },
     {
       "name": "Attractiveness",
+      "secondonly": true,
       "questions": [
         {
           "question": "I experienced the tour guide ...",
@@ -171,6 +176,7 @@
     },
     {
       "name": "MCQ",
+      "secondonly": false,
       "questions": [
         {
           "question": "A situation where a contagious disease spreads rapidly among people in a specific area is called:",
@@ -336,6 +342,7 @@
     },
     {
       "name": "Demographics",
+      "secondonly": true,
       "questions": [
         {
           "question": "What is your age?",

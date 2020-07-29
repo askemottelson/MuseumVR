@@ -104,11 +104,10 @@ public class ExperimentController : MonoBehaviour
         // now we have a server response
         Debug.Log("Participant ID: " + sh.sr.PID);
 
-        // MAKE POPUP HERE
-
+        sh.SetTitle("Thank you for participating! Your code is: " + sh.sr.PID);
     }
 
-    bool finishedQuestionnaireAlready = false;
+    
 
     private void _buttonPress(int button_id)
     {
@@ -125,9 +124,8 @@ public class ExperimentController : MonoBehaviour
         
         if (!more)
         {
-
-            if(finishedQuestionnaireAlready) { 
-                sh.SetTitle("Thank you for participating! You may now take off your headset.");
+            if(sh.finishedQuestionnaireAlready) { 
+                
                 sh.HideButtons();
                 sh.sendToServer();
                 StartCoroutine(CheckForServerResponse());
@@ -135,7 +133,7 @@ public class ExperimentController : MonoBehaviour
             else
             {
                 // let's allow for a second fill out of questionnaire pre/post
-                finishedQuestionnaireAlready = true;
+                sh.finishedQuestionnaireAlready = true;
                 sh.Reset();
                 Debug.Log("Filled out pre survey, DONE");
             }

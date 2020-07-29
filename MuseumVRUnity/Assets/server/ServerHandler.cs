@@ -24,6 +24,8 @@ public class ServerHandler : MonoBehaviour
     public GameObject button5;
 
     public ServerResponse sr;
+
+    public bool finishedQuestionnaireAlready = false;
     
 
     // make sure this one is false for deployment
@@ -58,7 +60,11 @@ public class ServerHandler : MonoBehaviour
 
     private Questionnaire GetCurrentQuestionnaire()
     {
-        return this.qs.questionnaires[current_questionnaire_count];
+        Questionnaire q = this.qs.questionnaires[current_questionnaire_count];
+        if(q.secondonly && finishedQuestionnaireAlready) {
+            this.current_questionnaire_count++;
+        }
+        return this.qs.questionnaires[current_questionnaire_count]
     }
 
     private Question GetCurrentQuestion()
