@@ -2,10 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExperimentController : MonoBehaviour
 {
     private ServerHandler sh;
+
+    public UnityEvent firstRoundDone;
+
 
 
     void Start()
@@ -122,7 +126,7 @@ public class ExperimentController : MonoBehaviour
         
         if (!more)
         {
-            if(sh.finishedQuestionnaireAlready) { 
+            if(sh.firstRoundDone) { 
                 
                 sh.HideButtons();
                 sh.sendToServer();
@@ -131,15 +135,26 @@ public class ExperimentController : MonoBehaviour
             else
             {
                 // let's allow for a second fill out of questionnaire pre/post
-                sh.finishedQuestionnaireAlready = true;
                 sh.Reset();
                 Debug.Log("Filled out pre survey, DONE");
             }
         }
         else
         {
-            sh.UpdateCanvas();            
+            try
+            {
+                sh.UpdateCanvas();
+            }
+            catch (FirstRoundDone e)
+            {
+                sh.Reset();
+                sh.SetTitle("Please proceed");
+                firstRoundDone.Invoke();
+
+            }
         }
     }
-    
+
 }
+
+

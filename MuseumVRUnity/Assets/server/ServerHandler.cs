@@ -11,6 +11,11 @@ public class NoMoreQuestions : Exception
     //
 }
 
+public class FirstRoundDone : Exception
+{
+    //
+}
+
 public class ServerHandler : MonoBehaviour
 {
     public TextAsset jsonFile;
@@ -25,7 +30,7 @@ public class ServerHandler : MonoBehaviour
 
     public ServerResponse sr;
 
-    public bool finishedQuestionnaireAlready = false;
+    public bool firstRoundDone = false;
     
 
     // make sure this one is false for deployment
@@ -50,6 +55,7 @@ public class ServerHandler : MonoBehaviour
     {
         this.current_questionnaire_count = 0;
         this.current_question_count = 0;
+        this.HideButtons();
     }
 
     void Start()
@@ -62,7 +68,7 @@ public class ServerHandler : MonoBehaviour
     {
         Questionnaire q = this.qs.questionnaires[current_questionnaire_count];
         
-        while(q.secondonly && !finishedQuestionnaireAlready) {
+        while(q.secondonly && !firstRoundDone) {
             this.current_questionnaire_count++;
             q = this.qs.questionnaires[current_questionnaire_count];
         }
@@ -88,6 +94,9 @@ public class ServerHandler : MonoBehaviour
         catch (Exception e) {
             // no more questions
             Debug.Log("No more questions");
+            firstRoundDone = true;
+            throw new FirstRoundDone();
+
             return;
         }
 
