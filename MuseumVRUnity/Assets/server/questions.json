@@ -210,7 +210,7 @@
           "question": "A situation where a contagious disease spreads rapidly among people in a specific area is called:",
           "b1": "An epidemic",
           "b2": "A pandemic",
-          "b3": "An outbreak",
+          "b3": "A rash",
           "b4": "A quarantine",
           "b5": ""
         },
@@ -239,19 +239,19 @@
           "b5": ""
         },
         {
-          "question": "What characteristic symptom is measles usually associated with?",
-          "b1": "Shortness of breath",
-          "b2": "Rash of red spots",
-          "b3": "Hair loss",
-          "b4": "Muscle weakness",
+          "question": "How many deaths has measles vaccination prevented?",
+          "b1": "13 million",
+          "b2": "23 million",
+          "b3": "33 million",
+          "b4": "43 million",
           "b5": ""
         },
-        {
-          "question": "Which animal is considered to be the primary source of transmission of zika virus to humans through its bite?",
-          "b1": "Dog",
-          "b2": "Monkey",
-          "b3": "Bat",
-          "b4": "Mosquito",
+		{
+          "question": "How many died in 2016 from measles?",
+          "b1": "60.000",
+          "b2": "70.000",
+          "b3": "80.000",
+          "b4": "90.000",
           "b5": ""
         },
         {
@@ -271,7 +271,7 @@
           "b5": ""
         },
         {
-          "question": "The COVID-19 was on Jan 30th declared by the World Health Organization to be a(n):",
+          "question": "The COVID-19 was in March 2020 declared by the World Health Organization to be a(n):",
           "b1": "Wave",
           "b2": "Outbreak",
           "b3": "Pandemic",
@@ -295,11 +295,11 @@
           "b5": ""
         },
         {
-          "question": "How many percent develop only mild or no symptoms after contracting COVID-19?",
-          "b1": "50",
-          "b2": "60",
-          "b3": "70",
-          "b4": "80",
+          "question": "What percentage develop only mild or no symptoms after contracting COVID-19?",
+          "b1": "60",
+          "b2": "70",
+          "b3": "80",
+          "b4": "90",
           "b5": ""
         },
         {
@@ -328,10 +328,10 @@
         },
         {
           "question": "When was the measles vaccination introduced?",
-          "b1": "1933",
-          "b2": "1943",
-          "b3": "1953",
-          "b4": "1963",
+          "b1": "1961",
+          "b2": "1962",
+          "b3": "1963",
+          "b4": "1964",
           "b5": ""
         },
         {
@@ -360,7 +360,7 @@
         },
         {
           "question": "Which of these areas reported the earliest outbreak of Zika virus?",
-          "b1": "French Polynesia",
+          "b1": "Texas, US",
           "b2": "Micronesia",
           "b3": "Brazil",
           "b4": "Florida, US",

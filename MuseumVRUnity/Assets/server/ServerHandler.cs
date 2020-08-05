@@ -112,6 +112,13 @@ public class ServerHandler : MonoBehaviour
         );
     }
 
+    IEnumerator delayFunction(Action delayedAction)
+    {
+        yield return new WaitForSeconds(3);
+
+        delayedAction();
+    }
+
     public void setButtonTitles(string[] values)
     {
         // first make all invis
@@ -131,7 +138,12 @@ public class ServerHandler : MonoBehaviour
                 continue;
             }
 
-            buttons[i].SetActive(true);
+            GameObject b = buttons[i];
+            Action delaySetButtonActive = () =>
+            {
+                b.SetActive(true);
+            };
+            StartCoroutine(delayFunction(delaySetButtonActive));
 
             try
             {
@@ -215,6 +227,15 @@ public class ServerHandler : MonoBehaviour
         button3.SetActive(false);
         button4.SetActive(false);
         button5.SetActive(false);
+    }
+
+    public void ShowButtons()
+    {
+        button1.SetActive(true);
+        button2.SetActive(true);
+        button3.SetActive(true);
+        button4.SetActive(true);
+        button5.SetActive(true);
     }
 
     public string toJSON()
