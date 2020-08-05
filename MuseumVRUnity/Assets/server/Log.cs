@@ -17,10 +17,10 @@ public class Log
         this.condition = rnd.Next(0, 5);
     }
 
-    public void NewAnswer(int answer)
+    public void NewAnswer(int answer, string name)
     {
         this.answers.Add(
-            new Answer(answer)
+            new Answer(answer, name)
         );
     }
 

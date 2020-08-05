@@ -14,12 +14,40 @@
         }
       ]
     },
+	{
+      "name": "Intrinsic-CL",
+      "secondonly": true,
+      "questions": [
+		  {
+			"question": "How difficult was the learning content for you?",
+			"b1": "Extremely easy",
+			  "b2": " > ",
+			  "b3": " > ",
+			  "b4": " > ",
+			"b5": "Extremely difficult"
+		  }
+	  ]
+	},
+	{
+      "name": "Extrinsic-CL",
+      "secondonly": true,
+      "questions": [
+		  {
+			"question": "How difficult was it for you to learn with the material?",
+			"b1": "Extremely easy",
+			  "b2": " > ",
+			  "b3": " > ",
+			  "b4": " > ",
+			"b5": "Extremely difficult"
+		  }
+	  ]
+	},
     {
       "name": "Perceived enjoyment",
       "secondonly": true,
       "questions": [
         {
-          "question": "Learning from the virtual instructor in the VR simulation was enjoyable",
+          "question": "Learning from the guide in the VR simulation was enjoyable",
           "b1": "Completely disagree",
           "b2": "Disagree",
           "b3": "Neither disagree nor agree",
@@ -27,7 +55,7 @@
           "b5": "Completely agree"
         },
         {
-          "question": "Learning from the virtual instructor in the VR simulation was pleasant",
+          "question": "Learning from the guide in the VR simulation was pleasant",
           "b1": "Completely disagree",
           "b2": "Disagree",
           "b3": "Neither disagree nor agree",
@@ -35,7 +63,7 @@
           "b5": "Completely agree"
         },
         {
-          "question": "It was fun to learn from the virtual instructor in the VR simulation",
+          "question": "It was fun to learn from the guide in the VR simulation",
           "b1": "Completely disagree",
           "b2": "Disagree",
           "b3": "Neither disagree nor agree",
@@ -49,7 +77,7 @@
       "secondonly": true,
       "questions": [
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Inanimate",
           "b2": " > ",
           "b3": " > ",
@@ -57,7 +85,7 @@
           "b5": "Living"
         },
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Synthetic",
           "b2": " > ",
           "b3": " > ",
@@ -65,7 +93,7 @@
           "b5": "Real"
         },
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Mechanical movement",
           "b2": " > ",
           "b3": " > ",
@@ -73,7 +101,7 @@
           "b5": "Biological movement"
         },
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Human-made",
           "b2": " > ",
           "b3": " > ",
@@ -81,7 +109,7 @@
           "b5": "Human-like"
         },
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Without definite lifespan",
           "b2": " > ",
           "b3": " > ",
@@ -141,7 +169,7 @@
       "secondonly": true,
       "questions": [
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Ugly",
           "b2": " > ",
           "b3": " > ",
@@ -149,7 +177,7 @@
           "b5": "Beautiful"
         },
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Repulsive",
           "b2": " > ",
           "b3": " > ",
@@ -157,7 +185,7 @@
           "b5": "Agreeable"
         },
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Crude",
           "b2": " > ",
           "b3": " > ",
@@ -165,7 +193,7 @@
           "b5": "Stylish"
         },
         {
-          "question": "I experienced the tour guide ...",
+          "question": "Please rate the guide based on the opposing adjectives below",
           "b1": "Messy",
           "b2": " > ",
           "b3": " > ",
@@ -197,17 +225,17 @@
         {
           "question": "When people who are not immune to a disease are given indirect protection through the majority who are immune to the disease, it is called:",
           "b1": "Herd immunity",
-          "b2": "Antimicrobial resistance",
+          "b2": "Anti-microbial resistance",
           "b3": "Majority protection",
           "b4": "Vaccine",
           "b5": ""
         },
         {
           "question": "Which genus is the virus that causes measles a member of?",
-          "b1": "Mamastrovirus",
-          "b2": "Machlomovirus",
-          "b3": "Morbillivirus",
-          "b4": "Maculavirus",
+          "b1": "Mamastro-virus",
+          "b2": "Machlomo-virus",
+          "b3": "Morbilli-virus",
+          "b4": "Macula-virus",
           "b5": ""
         },
         {
@@ -215,7 +243,7 @@
           "b1": "Shortness of breath",
           "b2": "Rash of red spots",
           "b3": "Hair loss",
-          "b4": "Kidney failure",
+          "b4": "Muscle weakness",
           "b5": ""
         },
         {
@@ -228,10 +256,10 @@
         },
         {
           "question": "What term is used to describe the birth defect caused by zika virus where a baby's head is smaller than expected?",
-          "b1": "Microcephaly",
+          "b1": "Micro-cephaly",
           "b2": "Anotia",
           "b3": "Microtia",
-          "b4": "Omphalocele",
+          "b4": "Omphalo-cele",
           "b5": ""
         },
         {
@@ -254,16 +282,16 @@
           "question": "When a disease is said to spread through droplets, it means it is spread through ...",
           "b1": "drinking water",
           "b2": "coughing or sneezing",
-          "b3": "atmospheric humidity",
+          "b3": "atmos-pheric humi-dity",
           "b4": "airborne dust particles",
           "b5": ""
         },
         {
-          "question": "What virus family is zika virus a member of?",
-          "b1": "Fuselloviridae",
-          "b2": "Guttaviridae",
-          "b3": "Flaviviridae",
-          "b4": "Genomoviridae",
+          "question": "Which virus family is zika virus a member of?",
+          "b1": "Fusello-viridae",
+          "b2": "Gutta-viridae",
+          "b3": "Flavi-viridae",
+          "b4": "Genomo-viridae",
           "b5": ""
         },
         {
@@ -310,7 +338,7 @@
           "question": "How do vaccines help the body develop immunity to diseases? They ...",
           "b1": "imitate an infection that the body remembers how to fight",
           "b2": "create a protective membrane around vital cells",
-          "b3": "contain microorganisms that combat virus",
+          "b3": "contain micro-organisms that combat virus",
           "b4": "contain antibodies that eliminate virus",
           "b5": ""
         },
@@ -324,18 +352,18 @@
         },
         {
           "question": "Where was the Zika virus first discovered?",
-          "b1": "50",
-          "b2": "60",
-          "b3": "70",
-          "b4": "80",
-          "b5": ""
-        },
-        {
-          "question": "Which of these areas reported the ealiest outbreak of Zika virus?",
           "b1": "Florida, US",
           "b2": "Texas, US",
           "b3": "Brazil",
           "b4": "Uganda",
+          "b5": ""
+        },
+        {
+          "question": "Which of these areas reported the earliest outbreak of Zika virus?",
+          "b1": "French Polynesia",
+          "b2": "Micronesia",
+          "b3": "Brazil",
+          "b4": "Florida, US",
           "b5": ""
         }
       ]

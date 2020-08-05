@@ -174,9 +174,20 @@ public class ServerHandler : MonoBehaviour
         UpdateCanvas();
     }
 
+    private string GetCurrentName()
+    {
+        Questionnaire questionnaire = GetCurrentQuestionnaire();
+        Question question = GetCurrentQuestion();
+
+        string name = questionnaire.name + "-Q" + this.current_question_count;
+
+        return name;
+    }
+
     public bool AnswerQuestion(int button_id)
     {
-        log.NewAnswer(button_id);
+        string name = GetCurrentName();
+        log.NewAnswer(button_id, name);
 
         if (current_question_count == GetCurrentQuestionnaire().questions.Length -1)
         {

@@ -10,7 +10,8 @@ public class ExperimentController : MonoBehaviour
 
     public UnityEvent firstRoundDone;
 
-
+    public GameObject noInternet;
+    public GameObject guideDestination;
 
     void Start()
     {
@@ -18,6 +19,19 @@ public class ExperimentController : MonoBehaviour
         this.sh = gameObject.GetComponent<ServerHandler>();
 
         //StartCoroutine(FillOut());
+
+        StartCoroutine(checkInternetConnection((isConnected) => {
+            // handle connection status here
+            if(!isConnected)
+            {
+                // make internet message visible, also stop everything
+                noInternet.SetActive(true);
+                guideDestination.SetActive(false);
+            }
+            else {
+                noInternet.SetActive(false);
+            }
+        }));
     }
 
 /*    IEnumerator FillOut()
@@ -108,11 +122,39 @@ public class ExperimentController : MonoBehaviour
         // now we have a server response
         Debug.Log("Participant ID: " + sh.sr.PID);
 
-        sh.SetTitle("Thank you for participating! Your code is: " + sh.sr.PID);
+        sh.SetTitle("Thank you for participating!\n\nYour code is: " + sh.sr.PID);
     }
 
+    IEnumerator checkInternetConnection(Action<bool> action)
+    {
+        WWW www = new WWW("http://google.com");
+        yield return www;
+        if (www.error != null)
+        {
+            action(false);
+        }
+        else
+        {
+            action(true);
+        }
+    }
+
+    IEnumerator LiftCoolDown()
+    {
+        yield return new WaitForSeconds(3);
+        cool_down = false;
+    }
+
+    bool cool_down = false;
     private void _buttonPress(int button_id)
     {
+        if(cool_down)
+        {
+            return;
+        }
+        cool_down = true;
+        StartCoroutine(LiftCoolDown());
+
         bool more = false;
         try
         {
