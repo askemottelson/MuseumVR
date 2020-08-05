@@ -14,34 +14,34 @@
         }
       ]
     },
-	{
+    {
       "name": "Intrinsic-CL",
       "secondonly": true,
       "questions": [
-		  {
-			"question": "How difficult was the learning content for you?",
-			"b1": "Very easy",
-			  "b2": " > ",
-			  "b3": " > ",
-			  "b4": " > ",
-			"b5": "Very difficult"
-		  }
-	  ]
-	},
-	{
+        {
+          "question": "How difficult was the learning content for you?",
+          "b1": "Very easy",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Very difficult"
+        }
+      ]
+    },
+    {
       "name": "Extrinsic-CL",
       "secondonly": true,
       "questions": [
-		  {
-			"question": "How difficult was it for you to learn with the material?",
-			"b1": "Very easy",
-			  "b2": " > ",
-			  "b3": " > ",
-			  "b4": " > ",
-			"b5": "Very difficult"
-		  }
-	  ]
-	},
+        {
+          "question": "How difficult was it for you to learn with the material?",
+          "b1": "Very easy",
+          "b2": " > ",
+          "b3": " > ",
+          "b4": " > ",
+          "b5": "Very difficult"
+        }
+      ]
+    },
     {
       "name": "Perceived enjoyment",
       "secondonly": true,
