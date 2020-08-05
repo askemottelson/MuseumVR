@@ -20,11 +20,11 @@
       "questions": [
 		  {
 			"question": "How difficult was the learning content for you?",
-			"b1": "Extremely easy",
+			"b1": "Very easy",
 			  "b2": " > ",
 			  "b3": " > ",
 			  "b4": " > ",
-			"b5": "Extremely difficult"
+			"b5": "Very difficult"
 		  }
 	  ]
 	},
@@ -34,11 +34,11 @@
       "questions": [
 		  {
 			"question": "How difficult was it for you to learn with the material?",
-			"b1": "Extremely easy",
+			"b1": "Very easy",
 			  "b2": " > ",
 			  "b3": " > ",
 			  "b4": " > ",
-			"b5": "Extremely difficult"
+			"b5": "Very difficult"
 		  }
 	  ]
 	},
